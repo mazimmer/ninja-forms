@@ -512,6 +512,10 @@ final class NF_Display_Render
 
         if( $is_preview || in_array( $form_id, self::$form_uses_recaptcha ) ) {
             $recaptcha_lang = Ninja_Forms()->get_setting('recaptcha_lang');
+			## if set to 'locale', use current locale, else use given language
+			if( $recaptcha_lang == 'locale' ) {
+				$recaptcha_lang = split('_',  get_locale())[0];
+			}
             wp_enqueue_script('nf-google-recaptcha', 'https://www.google.com/recaptcha/api.js?hl=' . $recaptcha_lang . '&onload=nfRenderRecaptcha&render=explicit', array( 'jquery', 'nf-front-end-deps' ), $ver, TRUE );
         }
 
