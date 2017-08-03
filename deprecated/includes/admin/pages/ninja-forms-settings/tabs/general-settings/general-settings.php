@@ -72,7 +72,7 @@ function ninja_forms_register_general_settings_metabox(){
                 'name'     => 'recaptcha_lang',
                 'type'     => 'text',
                 'label' => __( 'reCAPTCHA Language', 'ninja-forms' ),
-                'desc'     => 'e.g. en, da, locale - ' . sprintf( __( 'Language used by reCAPTCHA. Use "locale" to dynamically use the current language. To get the code for your language click %shere%s', 'ninja-forms' ), '<a href="https://developers.google.com/recaptcha/docs/language" target="_blank">', '</a>' )
+                'desc'     => 'e.g. en, da - ' . sprintf( __( 'Language used by reCAPTCHA. To get the code for your language click %shere%s', 'ninja-forms' ), '<a href="https://developers.google.com/recaptcha/docs/language" target="_blank">', '</a>' )
             ),
         ),
         'state' => 'closed',
